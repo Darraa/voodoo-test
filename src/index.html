@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+    <script defer src="./js/cart.js"></script>
+    <title>VooDoo Test</title>
+</head>
+
+<body class="font-main bg-sand">
+    <!------------------ HEADER ------------------>
+    <header class="border-b border-black flex md:py-12 md:pl-16 md:pr-[120px] p-6 justify-between items-start">
+        <div class="flex md:gap-3 gap-1">
+            <svg class="md:w-[45px] md:h-[45px] w-6 h-6">
+                <use xlink:href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+            <svg class="md:w-[192px] md:h-[98px] w-[107px] h-[50px]">
+                <use xlink:href="./img/sprite.svg#icon-logo-name"></use>
+            </svg>
+        </div>
+
+        <div class="flex md:gap-12 gap-4 items-center">
+            <img src="./img/shopping-cart.png" alt="cart" class="cart cursor-pointer">
+
+            <button class="bg-black rounded text-white md:text-xl text-sm py-2 px-4 font-bold hover:opacity-80">Sign-up</button>
+        </div>
+    </header>
+
+    <!------------------ SHOPPING CART ------------------>
+    <aside id="cart"
+        class="hidden bg-black z-10 text-white absolute top-0 right-0 h-full py-[50px] px-[45px] md:w-[445px] w-full overflow-auto">
+        <div class="cart-header flex justify-between items-center pb-5">
+            <span class="text-2xl">Shopping Cart</span>
+            <svg class="cart-close w-6 h-6 cursor-pointer">
+                <use xlink:href="./img/sprite.svg#icon-close-line"></use>
+            </svg>
+        </div>
+        <hr>
+
+        <div id="cart-container" class="cart-goods flex flex-col gap-10 pb-8 pt-12">
+        </div>
+
+        <hr>
+
+        <div class="cart-total flex justify-between mt-9">
+            <p>TOTAL</p>
+            <p><span id="total-price">0</span> KR.</p>
+        </div>
+    </aside>
+
+    <!------------------ MAIN ------------------>
+    <main class="main md:py-12 md:px-[120px] p-6">
+
+        <!------------------ INFO ------------------>
+        <div class="text-white">
+            <details class="bg-black rounded-md py-7 px-5">
+                <summary class="flex items-center cursor-pointer justify-between">
+                    <div class="flex flex-row items-center justify-between">
+                        <div class="flex gap-2">
+                            <img src="./img/alert-circle.png" alt="alert" />
+                            <span class="text-base">ALPHA</span>
+                        </div>
+                        <div class="md:pl-12 pl-6 text-sm">
+                            <p>Important info <span class="hidden md:inline-block">regarding our service</span></p>
+                        </div>
+                    </div>
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="chevron-down">
+                            <path id="Vector" d="M6 9L12 15L18 9" stroke="#FCF7E6" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </summary>
+
+                <div class="pt-6 mt-4 px-4 leading-normal text-md border-t border-white">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo dolorum est facilis facere sequi
+                    perspiciatis recusandae. Iusto qui natus exercitationem rem, repudiandae in ipsam, temporibus ex
+                    laudantium, quas dolor expedita.
+                </div>
+            </details>
+        </div>
+
+        <!------------------ GOODS LIST ------------------>
+        <div class="md:pb-[70px] pb-[60px]">
+            <div class="mt-12 grid gap-y-12 gap-x-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            id="item-list"></div>
+        </div>
+
+        <!------------------ PAGINATION ------------------>
+        <div>
+            <div class="container mx-auto flex flex-row items-center justify-center gap-2"
+                id="pagination-btns-container"></div>
+        </div>
+    </main>
+
+    <!------------------ FOOTER ------------------>
+    <footer class="footer bg-white text-sm font-bold p-12 border border-t-black mt-48">
+        <div class="flex justify-around md:flex-row-reverse flex-col gap-12">
+            <ul class="flex flex-col gap-2">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">RETURNS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <ul class="flex flex-col gap-2">
+                <li><a href="#">TERMS & CONDITIONS</a></li>
+                <li><a href="#">PRIVACY POLICY</a></li>
+                <li><a href="#">COOKIE POLICY</a></li>
+                <li><a href="#">COOKIE SETTINGS</a></li>
+            </ul>
+            <ul class="flex flex-col gap-2">
+                <li><a href="#">ABOUT VOODOO</a></li>
+                <li><a href="#">CAREER</a></li>
+                <li><a href="#">FACEBOOK</a></li>
+                <li><a href="#">INSTAGRAM</a></li>
+            </ul>
+            <svg class="w-20 h-20 m-auto md:m-0">
+                <use xlink:href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+        </div>
+    </footer>
+</body>
+
+</html>
